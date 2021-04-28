@@ -1,22 +1,33 @@
 .about {
+    .holder {
+        min-width: 100%;
+        min-height: 50%;
+        background: rgb(13, 13, 13) url('https://s3.envato.com/files/102898187/full.png') center center no-repeat;
+    }
+
+    // width: 100vw;
+    height: 100vh;
+
     &-grid {
         @include white_bg;
         display: grid;
         margin: 0 auto;
         max-width: 100%;
         max-height: 50%;
-        grid-template: repeat(auto-fill, minmax(100%, 50%)) / repeat(2, minmax(50%, 100%));
+        grid-template: repeat(1, minmax(50%, 100%)) / repeat(2, minmax(50%, 100%));
         grid-auto-rows: auto;
         grid-auto-columns: auto;
 
         &__photo {
+            width: 100%;
+            height: 100%;
 
             img {
                 display: block;
                 object-fit: cover;
-                border-radius: 5px;
+                border-radius: 0px;
                 width: 100%;
-                height: 700px;
+                height: 100%;
 
 
             }
@@ -27,16 +38,16 @@
         }
 
         &__title {
-            font-size: 36px;
+            font-size: calc(26px + 16 * (50vw / 1440))
         }
 
         &__descr {
             margin-top: 40px;
-            font-size: 20px;
+            font-size: calc(12px + 8 * (50vw / 1440))
         }
 
         &__social {
-            margin-top: 100px;
+            margin-top: 50px;
             width: 200px;
 
             ul {
@@ -49,6 +60,8 @@
                 li {
                     display: flex;
                     justify-content: center;
+                    height: 36px;
+                    width: 36px;
 
                     .vk {
                         margin-top: 6px;
