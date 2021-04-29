@@ -8,8 +8,12 @@
 }
 
 .container {
+    // position: relative;
     margin: 0 auto;
-    max-width: 100%;
+
+    &-m0 {
+        margin: 0;
+    }
 }
 
-@import 'blocks/promo', 'blocks/about', 'blocks/audioplayer', 'blocks/mybio';
+@import 'blocks/promo', 'blocks/headmenu', 'blocks/about', 'blocks/audioplayer', 'blocks/mybio';
